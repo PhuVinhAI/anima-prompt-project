@@ -7,10 +7,11 @@ Khi user yêu cầu tạo nhân vật anime hoặc viết prompt ảnh anime.
 - Đọc `anima-tags.md` (format) và `WORKFLOW.md` (các bước); làm theo.
 - Chỉ dùng tag có trong `anima-tags.md` hoặc `tags/` (Latent). Không bịa tag ngoài hai nguồn.
 - Nếu concept/tag không có trong cả hai: đề xuất tag gần nhất trước khi viết.
+- Nếu yêu cầu thiếu quyết định ảnh hưởng lớn: hỏi theo cây quyết định trong `WORKFLOW.md` (theo round, kèm đề xuất), không tự bịa.
 - Không sửa `tags/`, `anima-tags.md`, `WORKFLOW.md`, `pipeline/`.
 
 ## Quy trình
-1. Đọc yêu cầu và Anima Tags.
+1. Hỏi/chốt yêu cầu theo cây quyết định trong `WORKFLOW.md` (nếu cần); đọc Anima Tags.
 2. Tra tag cụ thể trong `tags/` bằng `grep -rnx "tag_name" tags` (dạng underscore); tránh tag deprecated (`~`).
 3. Kiểm tra tag đúng nhân vật/mô tả và không mâu thuẫn.
 4. Xuất output đúng định dạng Anima Tags.

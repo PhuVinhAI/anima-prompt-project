@@ -9,10 +9,14 @@ Biến yêu cầu nhân vật/cảnh anime thành một dòng tag Anima, chỉ d
 
 ## Các bước
 
-1. **Chốt yêu cầu**
-   - Xác định: số người, nhân vật/series, ngoại hình, trang phục, pose, bối cảnh, ánh sáng, style, NSFW.
-   - Xác định độ chi tiết để chọn số tag.
-   - Thiếu thông tin quan trọng thì hỏi; không tự bịa.
+1. **Hỏi/chốt yêu cầu theo cây quyết định**
+   - Cây: subject (số người/giới, character/series/OC) → appearance (tóc, mắt, body, age) → outfit (món chính, chi tiết, state) → pose/expression/action → framing/camera → setting/lighting → style/quality/rating → độ chi tiết (số tag).
+   - Frontier: chỉ hỏi câu mà câu trả lời không phụ thuộc câu chưa hỏi; hỏi các câu frontier trong một round, tối đa 4–5 câu, ưu tiên câu ảnh hưởng lớn; sau mỗi round, tính lại frontier.
+   - Mỗi câu ghi số thứ tự, lựa chọn cụ thể (tra nhanh `tags/` khi cần) và đề xuất mặc định; hỏi sao cho "có" = đồng ý đề xuất; chờ user trả lời trước round tiếp theo.
+   - Format: `❓ **Q1 — Tóc:** ...` + `➡️ Đề xuất: ...`.
+   - Fact (tag, biến thể, nhóm) là việc của agent: tự grep/đọc `tags/`; không hỏi user điều tự tra được. Tra đa dạng đầy đủ ở bước 3.
+   - User nói "tùy"/"không quan trọng" → dùng đề xuất, ghi rõ giả định.
+   - Hết frontier → tóm tắt spec ngắn để user xác nhận rồi mới viết. Yêu cầu đủ rõ (các slot lớn đã có giá trị hoặc user nói "tùy") thì chỉ nêu giả định ngắn và viết.
 
 2. **Tách slot**
    - count, character, series, artist, appearance, hair, eyes, body, clothing, undress, expression, pose, act, hands, framing, camera, place, lighting, style, effects.
@@ -62,6 +66,7 @@ Biến yêu cầu nhân vật/cảnh anime thành một dòng tag Anima, chỉ d
 
 ## Checklist
 - [ ] Đã đọc `anima-tags.md`.
+- [ ] Đã hỏi/chốt quyết định lớn hoặc nêu rõ giả định.
 - [ ] Đã tra exact + biến thể/synonym, không chỉ một grep.
 - [ ] Đã lập bảng tag → nghĩa → nguồn → xung đột.
 - [ ] 100% tag hợp lệ, không `~`, không trùng/mâu thuẫn.
