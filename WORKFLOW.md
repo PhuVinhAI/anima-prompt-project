@@ -18,19 +18,30 @@ Biến yêu cầu nhân vật/cảnh anime thành một dòng tag Anima, chỉ d
    - count, character, series, artist, appearance, hair, eyes, body, clothing, undress, expression, pose, act, hands, framing, camera, place, lighting, style, effects.
    - Multi-character: tách riêng từng người, không trộn trait.
 
-3. **Tra tag**
-   - Tag cụ thể: đổi khoảng trắng → `_`, rồi `grep -rnx "tag_name" tags`.
+3. **Tra tag đa dạng**
+   - Tag cụ thể: đổi khoảng trắng → `_`, tra exact: `grep -rnx "tag_name" tags`.
+   - Không thấy exact: mở `tags/README.md` chọn nhóm, đọc cả file nhóm và grep substring: `grep -rn "ponytail" tags`.
+   - Thử synonym/biến thể: `silver_hair` → `grey_hair`/`white_hair`; `hallway` → `school`/`window`/`classroom`; `nắng xiên` → `sunlight`/`sidelighting`/`backlighting`/`light_rays`.
+   - So sánh 2–3 ứng viên theo nghĩa, độ cụ thể, thứ hạng phổ biến và deprecated; chọn tag đúng nhất, không chọn generic nếu có tag chính xác.
    - Có và không `~` → dùng; xuất lại dạng khoảng trắng.
-   - Không có → kiểm tra tag chung trong `anima-tags.md`.
-   - Không có ở cả hai → đề xuất tag gần nhất trước khi viết; không tạo tag mới.
+   - Không có ở cả Latent và Anima Tags → đề xuất tag gần nhất trước khi viết; không tạo tag mới.
    - Tuổi/artist do user nêu: giữ đúng; `@artist` chỉ khi user nêu tên.
 
-4. **Kiểm tra phù hợp**
-   - Đúng nhân vật/ngoại hình; không gán tag của nhân vật khác.
-   - Không mâu thuẫn: solo vs 2girls, 1girl vs 1boy, indoors vs outdoors, day vs night, tóc/mắt trái mô tả.
-   - Tuổi, size, camera, POV theo Anima.
-   - Rating khớp nội dung.
-   - Không tag `~`.
+4. **Lập bảng nghĩa + kiểm tra xung đột**
+   - Lập bảng nội bộ (không xuất ra prompt), cột: `Tag | Nghĩa | Nguồn | Slot | Xung đột/ghi chú`.
+   - Mỗi tag ghi nghĩa ngắn, file nguồn, slot và cảnh báo.
+   - Ví dụ một dòng: `grey hair | tóc xám/bạc | tags/appearance/hair_color.md | hair | không dùng thêm white hair`.
+   - Kiểm tra chéo:
+     - count: `1girl`/`1boy`/`solo`/`2girls`/`multiple girls`.
+     - setting: `indoors`/`outdoors`, `day`/`night`/`sunset`.
+     - hair/eyes: 2 màu trừ `heterochromia`, dài/ngắn, kiểu tóc.
+     - clothing: mặc/khoả thân, các mảnh áo xung đột.
+     - expression: cười/khóc/`expressionless`/`serious`…
+     - pose/act: đứng/ngồi/nằm/chạy…
+     - framing/camera: `full body` vs `close-up`, `from above` vs `from below`, POV.
+     - rating vs nội dung; tuổi/size đúng.
+     - trùng lặp/implication: tag này đã bao hàm tag kia → bỏ tag thừa.
+   - Nếu xung đột: bỏ tag sai hoặc hỏi user; không giữ cả hai.
 
 5. **Dựng output**
    - Một dòng, chữ thường, phân cách `, `; không heading, giải thích, negative prompt hay `PROMPT:`.
@@ -41,7 +52,7 @@ Biến yêu cầu nhân vật/cảnh anime thành một dòng tag Anima, chỉ d
 6. **Kiểm tra cuối**
    - Đổi tag về `_` (trừ score) và grep lại toàn bộ.
    - 100% tag thuộc `tags/` hoặc `anima-tags.md`; không `~`.
-   - Không mâu thuẫn; đúng format.
+   - Không trùng/mâu thuẫn; đúng format.
    - Chỉ trả lời một dòng tag.
 
 ## Ngoại lệ
@@ -51,7 +62,7 @@ Biến yêu cầu nhân vật/cảnh anime thành một dòng tag Anima, chỉ d
 
 ## Checklist
 - [ ] Đã đọc `anima-tags.md`.
-- [ ] Đã tách slot và tra từng tag.
-- [ ] 100% tag hợp lệ, không `~`.
-- [ ] Không mâu thuẫn; đúng tuổi/size/camera.
+- [ ] Đã tra exact + biến thể/synonym, không chỉ một grep.
+- [ ] Đã lập bảng tag → nghĩa → nguồn → xung đột.
+- [ ] 100% tag hợp lệ, không `~`, không trùng/mâu thuẫn.
 - [ ] Một dòng, đúng format Anima.

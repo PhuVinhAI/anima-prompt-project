@@ -19,6 +19,6 @@ Chi tiết: `WORKFLOW.md`.
 
 ## Kiểm tra
 - [ ] Đã đọc Anima Tags.
-- [ ] Mọi tag thuộc Anima Tags hoặc Latent.
-- [ ] Không tag deprecated; không mâu thuẫn; đúng nhân vật/mô tả.
+- [ ] Đã tra exact + biến thể/synonym; lập bảng nghĩa + xung đột.
+- [ ] Mọi tag hợp lệ, không `~`, không trùng/mâu thuẫn.
 - [ ] Đúng format Anima Tags.
