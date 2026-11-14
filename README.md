@@ -5,6 +5,7 @@ Sản xuất prompt ảnh anime một dòng tag cho model Anima (CircleStone Lab
 ## Cấu trúc
 - `anima-tags.md` — output contract Anima (byte-identical với preset gốc).
 - `AGENTS.md` — rule cho agent khi tạo prompt anime.
+- `WORKFLOW.md` — quy trình sản xuất prompt từng bước.
 - `tags/` — 95 nhóm tag Latent; mỗi dòng một tag, sắp theo độ phổ biến, `~tag` = deprecated.
 - `pipeline/` — script crawl, rebuild và validate dữ liệu tag.
 
