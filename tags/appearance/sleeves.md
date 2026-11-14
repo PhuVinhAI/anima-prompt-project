@@ -1,0 +1,101 @@
+# Sleeves · appearance · 82 tags
+
+## Actions
+hands_in_opposite_sleeves
+pinching_sleeves
+grabbing_another's_sleeve
+arm_out_of_sleeve
+rolling_sleeves_up
+
+## Clothing with abnormal sleeves
+short-sleeved_jacket
+sleeved_leotard
+short-sleeved_sweater
+short-sleeved_coat
+
+## Colors
+white_sleeves
+black_sleeves
+see-through_sleeves
+blue_sleeves
+red_sleeves
+purple_sleeves
+pink_sleeves
+green_sleeves
+grey_sleeves
+yellow_sleeves
+brown_sleeves
+orange_sleeves
+aqua_sleeves
+two-tone_sleeves
+gradient_sleeves
+multicolored_sleeves
+
+## Length
+long_sleeves
+short_sleeves
+detached_sleeves
+sleeves_past_wrists
+sleeves_past_fingers
+sleeves_rolled_up
+short_over_long_sleeves
+three-quarter_sleeves
+single_detached_sleeve
+single_sleeve
+torn_sleeves
+sleeves_pushed_up
+uneven_sleeves
+
+## Miscellaneous
+sleeve_cuffs
+no_detached_sleeves
+up_sleeve
+nipple_sleeves
+
+## Patterns
+striped_sleeves
+ribbed_sleeves
+print_sleeves
+plaid_sleeves
+checkered_sleeves
+polka_dot_sleeves
+
+## Sleeveless clothing
+vest
+sleeveless_dress
+sleeveless_shirt
+sleeveless_turtleneck
+sleeveless_jacket
+sleeveless_kimono
+waistcoat
+sleeveless_sweater
+sleeveless_hoodie
+sleeveless_duster
+
+## Trim
+frilled_sleeves
+ribbon-trimmed_sleeves
+fur-trimmed_sleeves
+lace-trimmed_sleeves
+feather-trimmed_sleeves
+
+## Type
+puffy_sleeves
+wide_sleeves
+puffy_short_sleeves
+juliet_sleeves
+puffy_long_sleeves
+layered_sleeves
+raglan_sleeves
+puffy_detached_sleeves
+torn_sleeves
+cross-laced_sleeves
+mismatched_sleeves
+fishnet_sleeves
+puff_and_slash_sleeves
+furisode_sleeves
+bell_sleeves
+elbow_sleeve
+compression_sleeve
+paw_sleeves
+thumb_hole_sleeves
